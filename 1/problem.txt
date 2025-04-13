@@ -1,0 +1,18 @@
+## Question
+Gaurav wants to create a simple password strength checker. The password strength is determined based on the following criteria:
+- Contains at least one uppercase letter.
+- Contains at least one lowercase letter.
+- Contains at least one digit.
+- Contains at least one special character from the set: `!@#$%^&*()-_`
+- Has a minimum length of 8 characters and a maximum length of 20 characters.
+
+Write a function `check_password_strength(password: str) -> str` that takes a password string and returns one of the following:
+- "Strong" if the password meets all the criteria.
+- "Moderate" if the password only misses one criterion.
+- "Weak" if the password misses two or more criteria.
+
+SAMPLE INPUT
+Password1!
+
+SAMPLE OUTPUT
+Strong

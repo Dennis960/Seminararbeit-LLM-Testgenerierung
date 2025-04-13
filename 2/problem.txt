@@ -1,0 +1,30 @@
+## Question
+As a security analyst, you are tasked with monitoring the network for potential anomalies in data transfer activities. You need to analyze a list of data transfer records where each record is represented as a tuple containing the following information: (source IP, destination IP, transferred data amount in MB). For each source IP, you must determine the total data transferred and return a list of tuples where each tuple contains a source IP and the corresponding total transferred data amount. The list should be sorted by the total transferred data amount in descending order. If two sources have the same total transferred data amount, sort them by the source IP in ascending lexicographical order.
+
+### Function Signature
+```python
+def analyze_data_transfers(transfers: List[Tuple[str, str, int]]) -> List[Tuple[str, int]]:
+```
+
+### Input
+- transfers (List of Tuples[str, str, int]): A list of data transfer records, where each record is a tuple (source IP, destination IP, transferred data amount).
+
+### Output
+- List of Tuples[str, int]: A list of tuples where each tuple contains a source IP and the corresponding total transferred data amount, sorted by the total transferred data amount in descending order, and by the source IP in ascending lexicographical order if two sources have the same total transferred data amount.
+
+### Example
+```python
+transfers = [
+("192.168.1.1", "10.0.0.1", 500),
+("192.168.1.1", "10.0.0.2", 300),
+("10.0.0.1", "192.168.1.1", 200),
+("10.0.0.2", "192.168.1.1", 100)
+]
+
+analyze_data_transfers(transfers)
+```
+
+### Expected Output
+```python
+[("192.168.1.1", 800), ("10.0.0.1", 200), ("10.0.0.2", 100)]
+```
