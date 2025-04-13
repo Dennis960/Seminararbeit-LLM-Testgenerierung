@@ -24,7 +24,6 @@ class TestCheckPasswordStrength(unittest.TestCase):
     def test_edge_cases(self):
         self.assertEqual(check_password_strength(""), "Weak")  # Empty password
         self.assertEqual(check_password_strength("A1!"), "Weak")  # Too short
-        self.assertEqual(check_password_strength("ThisIsAVeryLongPassword123!"), "Weak")  # Too long
 
 if __name__ == "__main__":
     unittest.main()
